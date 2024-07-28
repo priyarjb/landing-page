@@ -7,10 +7,102 @@
 <html>
 	<head>
 		<title>Priya Rajbhandary</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Priya Rajbhandary</title>
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+		<style>
+			.project-image {
+				width: 50%; /* Set this to a smaller value as needed */
+				max-width: 200px; /* Maximum width of the image */
+				height: auto; /* Maintain aspect ratio */
+				display: block;
+				margin: 0 auto;
+			}
+			
+			/* Slideshow container */
+			.project-container {
+				display: flex;
+				align-items: flex-start; /* Aligns items at the start of the container */
+				gap: 20px; /* Adjust gap between the slideshow and the description */
+			}
+
+		.slideshow-container {
+			position: relative;
+			max-width: 50%; /* Adjust the width as needed */
+			overflow: hidden;
+		}
+
+		.mySlides {
+			display: none;
+		}
+
+		.mySlides img {
+			width: 100%;
+			height: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -22px;
+			padding: 16px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+		}
+
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.prev {
+			left: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		.prev:hover, .next:hover {
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		/* Fading animation */
+		.fade {
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		}
+
+		.project-description {
+			max-width: 50%; /* Adjust the width as needed */
+		}
+
+		.column {
+		float: left;
+		width: 50%;
+		padding: 5px;
+		}
+
+		/* Clear floats after image containers */
+		.row::after {
+		content: "";
+		clear: both;
+		display: table;
+		}
+		
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -20,7 +112,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-gem"></span>
+							<span class="icon fa-code"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -30,9 +122,9 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Intro</a></li>
+								<li><a href="#intro">About Me</a></li>
 								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
+								<li><a href="#projects">Projects</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -44,55 +136,135 @@
 
 						<!-- Intro -->
 							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<h2 class="major">About Me</h2>
+								<span class="image main"><img src="images/williams.jpg" alt="" /></span>
+								<p>I am Priya Rajbhandary, a rising Senior at Williams college studying Computer Science and Global Studies. I wish to work at the intersection of my academic majors –  applying technological solutions to real-world issues of inaccessibility and inequality.</p>
+								<p>I want to have global conversations through the work I am doing, and distribute innovation to everyone, no matter where they are located.</p>
 							</article>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+						<article id="work">
+							<h2 class="major">Work</h2>
+							
+							<!-- Kountable -->
+							<h3>Kountable, San Francisco, CA</h3>
+							<p><strong>Software Engineering Intern</strong><br>
+							<em>Jun. 2024 - Present</em></p>
+							<ul>
+								<li>Created prototypes for the digital B2B platform to determine a workable and scalable architectural design.</li>
+								<li>Collaborated with the UX/UI team to add intuitive features following user testing.</li>
+								<li>Researched and utilized REST API documentation to integrate with the platform.</li>
+								<li>Designed client-specific solutions for payments infrastructure, currency, and forex capabilities for global trade.</li>
+							</ul>
+							<hr>
+							<!-- AKALA -->
+							<h3>AKALA, Beverly Hills, CA</h3>
+							<p><strong>Edu Tech StartUp Intern</strong><br>
+							<em>Jun. 2023 - Aug. 2023</em></p>
+							<ul>
+								<li>Conducted research, data collection, and analysis on college admissions statistics with the Chief Product Officer.</li>
+								<li>Participated in outreach pitches for sponsors and potential clients, shadowing the CEO and VP of Sales.</li>
+								<li>Developed a UI product for investors to optimize AKALA’s sales pitch, utilizing Figma and user feedback.</li>
+							</ul>
+							<hr>
+							<!-- Peer Academic Support Network -->
+							<h3>Peer Academic Support Network, Williams College</h3>
+							<p><strong>Peer Tutor</strong><br>
+							<em>Sept. 2023 - Present</em></p>
+							<ul>
+								<li>Conducted 1:1 tutoring sessions and communicated with diverse sets of learners.</li>
+								<li>Mastered knowledge of Java and Python in their applications to data structures and algorithms.</li>
+							</ul>
+							<hr>
+							<!-- The Language Lab -->
+							<h3>The Language Lab, Williams College</h3>
+							<p><strong>Language Lab Monitor</strong><br>
+							<em>Sept. 2021 - Present</em></p>
+							<ul>
+								<li>Managed and elevated queries for faculty, students, and staff regarding Language Lab software Antidote.</li>
+								<li>Assisted visitors in operating audiovisual tech supplies and equipment.</li>
+							</ul>
+						</article>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+						
+							<article id="projects">
+								<h2 class="major">Projects</h2>
+								
+								<!-- Project 1: Found -->
+								<h3>Found</h3>
+								<div class="project-container">
+									<div class="slideshow-container">
+										<div class="mySlides fade">
+											<img src="images/found1.jpg" alt="Found Image 1">
+										</div>
+										<div class="mySlides fade">
+											<img src="images/found2.jpg" alt="Found Image 2">
+										</div>
+										<div class="mySlides fade">
+											<img src="images/found3.jpg" alt="Found Image 3">
+										</div>
+										<div class="mySlides fade">
+											<img src="images/found4.jpg" alt="Found Image 4">
+										</div>
+										<div class="mySlides fade">
+											<img src="images/found5.jpg" alt="Found Image 5">
+										</div>
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									</div>
+									<div class="project-description">
+										<p><strong>Date:</strong> May 2024</p>
+										<ul>
+											<li>Developed a mobile application featuring interactive map support and personalized Points of Interest (POIs) for exploring Budapest, in JetPack Compose.</li>
+											<li>Utilized Firebase for user management, multimedia storage, and Google Maps API for in-map functionality.</li>
+											<li>Implemented a categorized place-ranking system and multimedia documentation as a digital journal, in Kotlin.</li>
+										</ul>
+									</div>
+								</div>
+								<hr>
+								<!-- Project 2: Island Islang -->
+								<h3>Island Islang</h3>
+								<div class="row">
+									<div class="column">
+										<img src="images/island-islang-code.jpg" alt="Islang input" style="width:100%">
+									  </div>
+									<div class="column">
+									  <img src="images/island-islang.jpg" alt="SVG output" style="width:100%">
+									</div>
+								  </div>
+
+								<!-- <span class="image main"><img src="images/island-islang.jpg" alt="Island Islang Project Image" class="project-image"/></span> -->
+								<p><strong>Date:</strong> Dec. 2023</p>
+								<ul>
+									<li>Designed a modular component-based programming language as a sketching tool for 2D fantasy maps.</li>
+									<li>Constructed a Parser, Interpreter, Abstract Syntax Tree, and Grammar for an intuitive platform, utilizing F#.</li>
+									<li>Designed SVG sketches of prebuilt relativistic components with user-specified orientation, scale, and position.</li>
+								</ul>
+								<hr>
+								<!-- Project 3: LRU Cache -->
+								<h3>LRU Cache</h3>
+								<p><strong>Date:</strong> Nov. 2023</p>
+								<ul>
+									<li>Developed a C program simulating cache operations: hits and misses, and eviction executions from trace files.</li>
+									<li>Implemented a Least Recently Used (LRU) replacement policy and constructed the cache framework using structs.</li>
+								</ul>
+								<hr>
+								<!-- Project 4: Exam Scheduler -->
+								<h3>Exam Scheduler</h3>
+								<p><strong>Date:</strong> May 2023</p>
+								<ul>
+									<li>Designed a program to schedule exam slots using graph construction and traversal operations.</li>
+									<li>Implemented a Java greedy algorithm to alphabetize and organize slots by course number and random orderings of the nodes to find the true optimal schedule.</li>
+								</ul>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
+
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/priya-rajbhandary-a3a98b264/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:rajbhandary.priya@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									<li><a href="https://github.com/priya-rjb" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
 
@@ -357,5 +529,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				let slideIndex = 1;
+				showSlides(slideIndex);
+				
+				function plusSlides(n) {
+					showSlides(slideIndex += n);
+				}
+				
+				function currentSlide(n) {
+					showSlides(slideIndex = n);
+				}
+				
+				function showSlides(n) {
+					let i;
+					let slides = document.getElementsByClassName("mySlides");
+					if (n > slides.length) {slideIndex = 1}
+					if (n < 1) {slideIndex = slides.length}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					slides[slideIndex-1].style.display = "block";
+				}
+				</script>
+				
 	</body>
 </html>
